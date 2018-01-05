@@ -106,6 +106,10 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy /Y $(ProjectDir)*.dll $(TargetDir)
+copy /Y $(ProjectDir)*.lib $(TargetDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -152,6 +156,10 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy /Y $(ProjectDir)*.dll $(TargetDir)
+copy /Y $(ProjectDir)*.lib $(TargetDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -204,10 +212,30 @@
     <ResourceCompile Include="AgilorDebugTools.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AgilorAPI.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="DeviceDataBuffer.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="DeviceRtdb.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="res\AgilorDebugTools.rc2" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\AgilorDebugTools.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="AgilorAPI.lib">
+      <DeploymentContent>true</DeploymentContent>
+    </Library>
+    <Library Include="DeviceDataBuffer.lib">
+      <DeploymentContent>true</DeploymentContent>
+    </Library>
+    <Library Include="DeviceRtdb.lib">
+      <DeploymentContent>true</DeploymentContent>
+    </Library>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

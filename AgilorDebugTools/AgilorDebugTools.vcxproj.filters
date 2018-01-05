@@ -60,10 +60,18 @@
     <None Include="res\AgilorDebugTools.rc2">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="AgilorAPI.dll" />
+    <None Include="DeviceRtdb.dll" />
+    <None Include="DeviceDataBuffer.dll" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\AgilorDebugTools.ico">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="AgilorAPI.lib" />
+    <Library Include="DeviceRtdb.lib" />
+    <Library Include="DeviceDataBuffer.lib" />
   </ItemGroup>
 </Project>

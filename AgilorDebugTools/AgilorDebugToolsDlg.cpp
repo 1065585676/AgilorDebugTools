@@ -387,7 +387,7 @@ void CAgilorDebugToolsDlg::OnBnClickedButtonAciRead()
 		logInfo.Format("TagName:%s, SourceTag:%s, TagType:%c, Value: %s\r\n", tagInfo.TagName, tagInfo.SourceTag, tagInfo.TagType, tagInfo.sval);
 		break;
 	case 'L':
-		logInfo.Format("TagName:%s, SourceTag:%s, TagType:%c, Value: %l\r\n", tagInfo.TagName, tagInfo.SourceTag, tagInfo.TagType, tagInfo.lval);
+		logInfo.Format("TagName:%s, SourceTag:%s, TagType:%c, Value: %d\r\n", tagInfo.TagName, tagInfo.SourceTag, tagInfo.TagType, tagInfo.lval);
 		break;
 	case 'B':
 		logInfo.Format("TagName:%s, SourceTag:%s, TagType:%c, Value: %d\r\n", tagInfo.TagName, tagInfo.SourceTag, tagInfo.TagType, tagInfo.bval);
